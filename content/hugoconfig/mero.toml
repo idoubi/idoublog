@@ -1,0 +1,38 @@
+baseURL = "https://idoubi.cc"
+languageCode = "en-us"
+title = "艾逗笔个人博客"
+theme = "mero"
+disableKinds = ["taxonomyTerm"]
+
+[params]
+  dateFormat = "2006-01-02" 
+  author = "艾逗笔"
+  description = "有梦想爱学习的实力派。"
+  mainImage = "images/main.jpeg"
+
+[params.introduction]
+   text = "有逻辑的脑子万里挑一。"
+
+[params.social]
+  [[params.social.list]]
+  class = "fab"
+  icon = "fa-github"
+  url = "https://github.com/idoubi"
+
+  [[params.social.list]]
+  class = "fab"
+  icon = "fa-weibo"
+  url = "https://weibo.com/u/2611593311"
+
+  [[params.social.list]]
+  class = "fab"
+  icon = "fa-weixin"
+  url = "http://blogcdn.idoustudio.com/idoubi-mp-1.png"
+
+  [[params.social.list]]
+  class = "fab"
+  icon = "fa-zhihu"
+  url = "https://www.zhihu.com/people/idoubi"  
+
+[params.footer]
+  message = "&copy; 2020 艾逗笔 All rights reserved."
