@@ -1,0 +1,147 @@
+baseurl = "https://idoubi.cc"
+title = "艾逗笔博客"
+
+theme = "coder"
+
+languagecode = "en"
+defaultcontentlanguage = "en"
+
+paginate = 20
+canonifyurls = true
+
+pygmentsstyle = "b2"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+disqusShortname = "yourdiscussshortname"
+
+[params]
+    author = "艾逗笔"
+    description = "艾逗笔个人博客，有逻辑的脑子万里挑一。"
+    keywords = "艾逗笔,艾豆,idoubi"
+    info = "有逻辑的脑子万里挑一"
+    avatarurl = "http://blogcdn.idoustudio.com/idoubi.png"
+    #gravatar = "john.doe@example.com"
+    footercontent = ""
+
+    dateformat = "2006/01/02"
+
+    hideFooter = false
+    hideCredits = false
+    hideCopyright = false
+    since = 2020
+
+    # Git Commit in Footer, uncomment the line below to enable it.
+    # commit = "https://github.com/luizdepra/hugo-coder/tree/"
+
+    rtl = false
+
+    # Specify light/dark colorscheme
+    # Supported values:
+    # "auto" (use preference set by browser)
+    # "dark" (dark background, light foreground)
+    # "light" (light background, dark foreground) (default)
+    colorscheme = "light"
+
+    # Series see also post count
+    maxSeeAlsoItems = 5
+
+    # Enable Twemoji
+    enableTwemoji = true
+
+    # Custom CSS
+    custom_css = []
+
+    # Custom JS
+    custom_js = []
+
+# If you want to use fathom(https://usefathom.com) for analytics, add this section
+[params.fathomAnalytics]
+    siteID = "ABCDE"
+    # Default value is cdn.usefathom.com, overwrite this if you are self-hosting
+    serverURL = "analytics.example.com"
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+
+[[params.social]]
+    name = "Github"
+    icon = "fab fa-github"
+    weight = 1
+    url = "https://github.com/idoubi"
+[[params.social]]
+    name = "微博"
+    icon = "fab fa-weibo"
+    weight = 2
+    url = "https://weibo.com/u/2611593311"
+[[params.social]]
+    name = "微信"
+    icon = "fab fa-weixin"
+    weight = 3
+    url = "http://blogcdn.idoustudio.com/idoubi-mp.jpeg"
+[[params.social]]
+    name = "知乎"
+    icon = "fab fa-zhihu"
+    weight = 4
+    url = "https://www.zhihu.com/people/idoubi"
+
+[languages]
+    [languages.en]
+        languagename = "English"
+
+        [languages.en.menu]
+
+            [[languages.en.menu.main]]
+            name = "文章"
+            weight = 1
+            url = "posts/"
+
+            [[languages.en.menu.main]]
+            name = "分类"
+            weight = 2
+            url = "categories/"
+
+            [[languages.en.menu.main]]
+            name = "作品"
+            weight = 3
+            url = "works/"
+
+            [[languages.en.menu.main]]
+            name = "关于"
+            weight = 4
+            url = "about/"
+
+    # [languages.pt-br]
+    #     languagename = "Português"
+    #     title = "João Ninguém"
+
+    #     [languages.pt-br.params]
+    #         author = "João Ninguém"
+    #         info = "Full Stack DevOps e Mágico"
+    #         description = "Sítio pessoal de João Ninguém"
+    #         keywords = "blog,desenvolvedor,pessoal"
+    #         footercontent = "Coloque algum texto aqui."
+
+    #     [languages.pt-br.menu]
+
+    #         [[languages.pt-br.menu.main]]
+    #         name = "Sobre"
+    #         weight = 1
+    #         url = "about/"
+
+    #         [[languages.pt-br.menu.main]]
+    #         name = "Blog"
+    #         weight = 2
+    #         url = "posts/"
+
+    #         [[languages.pt-br.menu.main]]
+    #         name = "Projetos"
+    #         weight = 3
+    #         url = "projects/"
+
+    #         [[languages.pt-br.menu.main]]
+    #         name = "Contato"
+    #         weight = 5
+    #         url = "contact/"

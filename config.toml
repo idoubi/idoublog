@@ -1,103 +1,80 @@
-# hugo server --minify --themesDir ... --baseURL=http://0.0.0.0:1313/theme/hugo-book/
+baseURL = "https://idoubi.cc"
+languageCode = "en"
+defaultContentLanguage = "en"
+title = "艾逗笔博客"                         # site title  # 网站标题
+theme = "zozo"
+hasCJKLanguage = true                  # has chinese/japanese/korean ?  # 自动检测是否包含 中文\日文\韩文
+summaryLength = 100
+paginate = 4                           # shows the number of articles  # 首页显示文章数量
+enableEmoji = true
+googleAnalytics = ""                   # your google analytics id
+disqusShortname = ""                   # your discuss shortname
 
-baseURL = 'https://idoubi.cc'
-title = '艾逗笔个人博客'
-theme = 'book'
+pygmentsUseClasses = true
+pygmentCodeFences = true
+pygmentscodefencesguesssyntax = true
 
-# Book configuration
-disablePathToLower = true
-enableGitInfo = true
+[author]                               # essential                     # 必需
+  name = "艾逗笔"
 
-# Needed for mermaid/katex shortcodes
-[markup]
-[markup.goldmark.renderer]
-  unsafe = true
+[blackfriday]
+  smartypants = false
 
-[markup.tableOfContents]
-  startLevel = 1
-
-# Multi-lingual mode config
-# There are different options to translate files
-# See https://gohugo.io/content-management/multilingual/#translation-by-filename
-# And https://gohugo.io/content-management/multilingual/#translation-by-content-directory
-[languages]
-[languages.en]
-  languageName = 'English'
-  contentDir = 'content'
-  weight = 1
-
-[languages.ru]
-  languageName = 'Russian'
-  contentDir = 'content.ru'
-  weight = 2
-
-[languages.zh]
-  languageName = 'Chinese'
-  contentDir = 'content.zh'
-  weight = 3
-
-[menu]
-# [[menu.before]]
-[[menu.after]]
-  name = "Github"
-  url = "https://github.com/alex-shpak/hugo-book"
+[[menu.main]]                          # config your menu  # 配置菜单
+  name = "首页"
   weight = 10
-
-[[menu.after]]
-  name = "Hugo Themes"
-  url = "https://themes.gohugo.io/hugo-book/"
+  identifier = "home"
+  url = "/"
+[[menu.main]]
+  name = "文章"
   weight = 20
+  identifier = "posts"
+  url = "/posts/"
+[[menu.main]]
+  name = "标签"
+  weight = 30
+  identifier = "tags"
+  url = "/tags/"
+[[menu.main]]
+  name = "作品"
+  weight = 36
+  identifier = "works"
+  url = "/works/"
+[[menu.main]]
+  name = "关于"
+  weight = 40
+  identifier = "about"
+  url = "/about/"
 
 [params]
-  # (Optional, default true) Controls table of contents visibility on right side of pages.
-  # Start and end levels can be controlled with markup.tableOfContents setting.
-  # You can also specify this parameter per page in front matter.
-  BookToC = true
+  logo = "http://blogcdn.idoustudio.com/idoubi.png"
+  subTitle = "有逻辑的脑子万里挑一"                                       # site's subTitle  # 网站二级标题
+  footerSlogan = "©2020 艾逗笔"                                   # site's footer slogan  # 网站页脚标语
+  keywords = ["艾逗笔","艾豆","idoubi"]                                  # site's keywords  # 网站关键字
+  description = "艾逗笔个人博客，有逻辑的脑子万里挑一。"                        # site's description  # 网站描述
+  enableMathJax = true                                                 # enable mathjax  # 是否使用mathjax（数学公式）
+  enableSummary = true                                                 # display the article summary  # 是否显示文章摘要
+  mainSections = ["posts","post"]
+  
+# Valine.
+# You can get your appid and appkey from https://leancloud.cn
+# more info please open https://valine.js.org
+[params.valine]
+  enable = true
+  appId = ""
+  appKey = ""
+  placeholder = " "
+  visitor = true
 
-  # (Optional, default none) Set the path to a logo for the book. If the logo is
-  # /static/logo.png then the path would be logo.png
-  # BookLogo = 'logo.png'
+# Your socail's url
+[social]
+  github = "https://github.com/idoubi"
+  # twitter = " "
+  # facebook = " "
+  weibo = "https://weibo.com/u/2611593311"
+  # instagram = " "
 
-  # (Optional, default none) Set leaf bundle to render as side menu
-  # When not specified file structure and weights will be used
-  # BookMenuBundle = '/menu'
-
-  # (Optional, default docs) Specify root page to render child pages as menu.
-  # Page is resoled by .GetPage function: https://gohugo.io/functions/getpage/
-  # For backward compatibility you can set '*' to render all sections to menu. Acts same as '/'
-  BookSection = 'docs'
-
-  # Set source repository location.
-  # Used for 'Last Modified' and 'Edit this page' links.
-  BookRepo = 'https://github.com/alex-shpak/hugo-book'
-
-  # Enable "Edit this page" links for 'doc' page type.
-  # Disabled by default. Uncomment to enable. Requires 'BookRepo' param.
-  # Edit path must point to root directory of repo.
-  BookEditPath = 'edit/master/exampleSite'
-
-  # Configure the date format used on the pages
-  # - In git information
-  # - In blog posts
-  BookDateFormat = 'January 2, 2006'
-
-  # (Optional, default true) Enables search function with flexsearch,
-  # Index is built on fly, therefore it might slowdown your website.
-  # Configuration for indexing can be adjusted in i18n folder per language.
-  BookSearch = true
-
-  # (Optional, default true) Enables comments template on pages
-  # By default partals/docs/comments.html includes Disqus template
-  # See https://gohugo.io/content-management/comments/#configure-disqus
-  # Can be overwritten by same param in page frontmatter
-  BookComments = true
-
-  # /!\ This is an experimental feature, might be removed or changed at any time
-  # (Optional, experimental, default false) Enables portable links and link checks in markdown pages.
-  # Portable links meant to work with text editors and let you write markdown without {{< relref >}} shortcode
-  # Theme will print warning if page referenced in markdown does not exists.
-  BookPortableLinks = true
-
-  # /!\ This is an experimental feature, might be removed or changed at any time
-  # (Optional, experimental, default false) Enables service worker that caches visited pages and resources for offline use.
-  BookServiceWorker = true
+[markup]
+[markup.goldmark]
+[markup.goldmark.renderer]
+  unsafe = true

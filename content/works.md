@@ -8,9 +8,9 @@ about: works
 
 一款简洁、高效的微信开发框架
 
-- [HexoPro](https://hexo.pro)
+<!-- - [HexoPro](https://hexo.pro)
 
-Hexo 精品主题站
+Hexo 精品主题站 -->
 
 - [GoNews](http://gonews.idoubi.cc)
 
