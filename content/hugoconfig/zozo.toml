@@ -1,0 +1,80 @@
+baseURL = "https://idoubi.cc"
+languageCode = "en"
+defaultContentLanguage = "en"
+title = "艾逗笔博客"                         # site title  # 网站标题
+theme = "zozo"
+hasCJKLanguage = true                  # has chinese/japanese/korean ?  # 自动检测是否包含 中文\日文\韩文
+summaryLength = 100
+paginate = 4                           # shows the number of articles  # 首页显示文章数量
+enableEmoji = true
+googleAnalytics = ""                   # your google analytics id
+disqusShortname = ""                   # your discuss shortname
+
+pygmentsUseClasses = true
+pygmentCodeFences = true
+pygmentscodefencesguesssyntax = true
+
+[author]                               # essential                     # 必需
+  name = "艾逗笔"
+
+[blackfriday]
+  smartypants = false
+
+[[menu.main]]                          # config your menu  # 配置菜单
+  name = "首页"
+  weight = 10
+  identifier = "home"
+  url = "/"
+[[menu.main]]
+  name = "文章"
+  weight = 20
+  identifier = "posts"
+  url = "/posts/"
+[[menu.main]]
+  name = "标签"
+  weight = 30
+  identifier = "tags"
+  url = "/tags/"
+[[menu.main]]
+  name = "作品"
+  weight = 36
+  identifier = "works"
+  url = "/works/"
+[[menu.main]]
+  name = "关于"
+  weight = 40
+  identifier = "about"
+  url = "/about/"
+
+[params]
+  logo = "http://blogcdn.idoustudio.com/idoubi.png"
+  subTitle = "有逻辑的脑子万里挑一"                                       # site's subTitle  # 网站二级标题
+  footerSlogan = "©2020 艾逗笔"                                   # site's footer slogan  # 网站页脚标语
+  keywords = ["艾逗笔","艾豆","idoubi"]                                  # site's keywords  # 网站关键字
+  description = "艾逗笔个人博客，有逻辑的脑子万里挑一。"                        # site's description  # 网站描述
+  enableMathJax = true                                                 # enable mathjax  # 是否使用mathjax（数学公式）
+  enableSummary = true                                                 # display the article summary  # 是否显示文章摘要
+  mainSections = ["posts","post"]
+  
+# Valine.
+# You can get your appid and appkey from https://leancloud.cn
+# more info please open https://valine.js.org
+[params.valine]
+  enable = true
+  appId = ""
+  appKey = ""
+  placeholder = " "
+  visitor = true
+
+# Your socail's url
+[social]
+  github = "https://github.com/idoubi"
+  # twitter = " "
+  # facebook = " "
+  weibo = "https://weibo.com/u/2611593311"
+  # instagram = " "
+
+[markup]
+[markup.goldmark]
+[markup.goldmark.renderer]
+  unsafe = true

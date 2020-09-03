@@ -9,13 +9,13 @@ categories:
 date: 2016-10-25 12:10:37
 ---
 
-在php请求接口的时候，我们经常需要考虑的一个问题就是数据的安全性，因为数据传输过程中很有可能会被用fillder这样的抓包工具进行截获。一种比较好的解决方案就是在客户端请求发起之前先对要请求的数据进行加密，服务端api接收到请求数据后再对数据进行解密处理，返回结果给客户端的时候也对要返回的数据进行加密，客户端接收到返回数据的时候再解密。因此整个api请求过程中数据的安全性有了一定程度的提高。
+在 php 请求接口的时候，我们经常需要考虑的一个问题就是数据的安全性，因为数据传输过程中很有可能会被用 fillder 这样的抓包工具进行截获。一种比较好的解决方案就是在客户端请求发起之前先对要请求的数据进行加密，服务端 api 接收到请求数据后再对数据进行解密处理，返回结果给客户端的时候也对要返回的数据进行加密，客户端接收到返回数据的时候再解密。因此整个 api 请求过程中数据的安全性有了一定程度的提高。
 
-今天结合一个简单的demo给大家分享一下AES加解密技术在php接口请求中的应用。
+今天结合一个简单的 demo 给大家分享一下 AES 加解密技术在 php 接口请求中的应用。
 
-## AES加解密基础类：
+## AES 加解密基础类：
 
-```
+```php
 <?php
 
 /**
@@ -40,7 +40,7 @@ class Crypt_AES
     /**
      * 构造函数，对于密钥key应区分2进制字符串和16进制的。
      * 如需兼容PKCS#7标准，应选项设置开启PKCS7，默认关闭
-     * @param string $key  
+     * @param string $key
      * @param mixed $iv      向量值
      * @param array $options
      */
@@ -84,14 +84,14 @@ class Crypt_AES
 
     /**
      * 开启加密算法
-     * @param  string $algorithm_directory locate the encryption 
+     * @param  string $algorithm_directory locate the encryption
      * @param  string $mode_directory
      * @return Crypt_AES
      */
-    public function _openMode($algorithm_directory = " , $mode_directory = ") 
+    public function _openMode($algorithm_directory = " , $mode_directory = ")
     {
-        $this->_descriptor = mcrypt_module_open($this->_cipher, 
-                                                $algorithm_directory, 
+        $this->_descriptor = mcrypt_module_open($this->_cipher,
+                                                $algorithm_directory,
                                                 $this->_mode,
                                                 $mode_directory);
         return $this;
@@ -135,7 +135,7 @@ class Crypt_AES
     {
         $this->_cipher = $cipher;
         return $this;
-    }    
+    }
     /**
      * 获得key
      * @return string
@@ -153,7 +153,7 @@ class Crypt_AES
     {
         $this->_key = $key;
         return $this;
-    }    
+    }
 
     /**
      * 获得加密向量块,如果其为null时将追加当前Descriptor的IV大小长度
@@ -179,7 +179,7 @@ class Crypt_AES
     {
         $this->_iv = $iv;
         return $this;
-    }   
+    }
 
     /**
      * 加密
@@ -202,7 +202,7 @@ class Crypt_AES
 
             $len = strlen($dat);
             $padding = $block - ($len % $block);
-            $dat .= str_repeat(chr($padding),$padding);            
+            $dat .= str_repeat(chr($padding),$padding);
         }
 
         return $dat;
@@ -219,7 +219,7 @@ class Crypt_AES
 
     /**
      * 解密
-     * @param  string $str 
+     * @param  string $str
      * @return string
      */
     public function decrypt($str){
@@ -237,7 +237,7 @@ class Crypt_AES
      * @param  string $hexdata 16进制字符串
      * @return string
      */
-    public static function hex2bin($hexdata) 
+    public static function hex2bin($hexdata)
     {
         return pack("H*" , $hexdata);
     }
@@ -272,8 +272,9 @@ class Crypt_AES
 ```
 
 ## 客户端请求部分：
-```
-<?php 
+
+```php
+<?php
 
 include 'AES.php';
 
@@ -318,8 +319,9 @@ function post($url, $params) {
 ```
 
 ## 接口处理逻辑：
+
 ```
-<?php 
+<?php
 
 include 'AES.php';
 
@@ -349,6 +351,6 @@ if(strcasecmp(md5(urlencode($content).$md5key),$sign) == 0) {
 
 ```
 
-上述接口请求过程中定义了三个加解密需要用到的参数：$aesKey、$aesIV、$md5key，在实际应用过程中，只要与客户端用户约定好这三个参数，客户端程序员利用这几个参数对要请求的数据进行加密后再请求接口，服务端程序员在接收到数据后利用同样的加解密参数对数据进行解密，整个api请求过程中的数据就很安全了。
+上述接口请求过程中定义了三个加解密需要用到的参数：$aesKey、$aesIV、\$md5key，在实际应用过程中，只要与客户端用户约定好这三个参数，客户端程序员利用这几个参数对要请求的数据进行加密后再请求接口，服务端程序员在接收到数据后利用同样的加解密参数对数据进行解密，整个 api 请求过程中的数据就很安全了。
 
 [aesdemo](http://ov13triio.bkt.clouddn.com/2016/10/aesdemo.zip)

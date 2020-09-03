@@ -1,6 +1,7 @@
 ---
 title: "在「VS Code」搭建「C++」开发环境"
 date: 2020-07-25T12:29:30+08:00
+show_toc: true
 ---
 
 大家都知道「VS Code」是一个“真香”编辑器，用来做「C++」开发也是一样的香！
@@ -14,10 +15,10 @@ date: 2020-07-25T12:29:30+08:00
 ```cpp
 #include <iostream>
 using namespace std;
- 
+
 int main()
 {
-   cout << "Hello World"; 
+   cout << "Hello World";
    return 0;
 }
 ```
@@ -50,8 +51,8 @@ g++ hello.cpp -o hello
 如果看到如下输出，证明我们的 C++ 编码环境是 OK 的
 
 ```shell
-$ ./hello 
-Hello World#  
+$ ./hello
+Hello World#
 ```
 
 ## VS Code 编译/运行 C++ 代码
@@ -70,50 +71,53 @@ Hello World#
 
 ```json
 {
-    "version": "2.0.0",
-    "tasks": [{
-        "label": "build",
-        "type": "shell",
-        "command": "g++",
-        "args": [
-            "${file}",
-            "-o",
-            "${workspaceFolder}/bin/${fileBasenameNoExtension}",
-            "-g",
-            "-Wall",
-            "-std=c++11"
-        ],
-        "group": {
-            "kind": "build",
-            "isDefault": true
-        },
-        "presentation": {
-            "echo": true,
-            "reveal": "always",
-            "focus": false,
-            "panel": "shared",
-            "showReuseMessage": true,
-            "clear": false
-        },
-        "problemMatcher": "$gcc"
-    }, {
-        "label": "run",
-        "type": "shell",
-        "dependsOn": "build",
-        "command": "${workspaceFolder}/bin/${fileBasenameNoExtension}",
-        "group": {
-            "kind": "test",
-            "isDefault": true
-        },
-        "presentation": {
-            "echo": true,
-            "reveal": "always",
-            "focus": true,
-            "panel": "shared",
-            "showReuseMessage": true,
-            "clear": false
-        }
-    }]
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "${file}",
+        "-o",
+        "${workspaceFolder}/bin/${fileBasenameNoExtension}",
+        "-g",
+        "-Wall",
+        "-std=c++11"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "problemMatcher": "$gcc"
+    },
+    {
+      "label": "run",
+      "type": "shell",
+      "dependsOn": "build",
+      "command": "${workspaceFolder}/bin/${fileBasenameNoExtension}",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": true,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      }
+    }
+  ]
 }
 ```
 
@@ -138,31 +142,34 @@ Hello World#
 
 ```json
 {
-    "version": "0.2.0",
-    "configurations": [{
-        "name": "Debug",
-        "type": "cppdbg",
-        "request": "launch",
-        "program": "${workspaceFolder}/bin/${fileBasenameNoExtension}",
-        "args": [],
-        "stopAtEntry": false,
-        "cwd": "${workspaceFolder}",
-        "environment": [],
-        "externalConsole": false,
-        "MIMode": "gdb",
-        "setupCommands": [{
-            "description": "Enable pretty-printing for gdb",
-            "text": "-enable-pretty-printing",
-            "ignoreFailures": true
-        }],
-        "preLaunchTask": "build"
-    }]
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/bin/${fileBasenameNoExtension}",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "build"
+    }
+  ]
 }
 ```
 
 打开调试面板，就可以对 C++ 代码进行断点调试了。
 
 ![debug](http://blogcdn.idoustudio.com/pic/20200725130519.png)
-
 
 > 工欲善其事必先利其器。C++ 学习任重而道远，搭建好了 VS Code 开发环境，对于我们以后的学习和开发，肯定会带来非常大的便利。
