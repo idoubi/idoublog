@@ -1,8 +1,4 @@
----
-title: 关于我
-type: about
-layout: about
----
+## 艾逗笔个人博客
 
 > 有逻辑的脑子万里挑一。
 
@@ -18,3 +14,5 @@ layout: about
 - 个人博客：[http://idoubi.cc](http://idoubi.cc)
 - 微博：[http://weibo.com/u/2611593311](http://weibo.com/u/2611593311)
 - Github：[https://github.com/idoubi](https://github.com/idoubi)
+
+![](http://blogcdn.idoustudio.com/idoubi-mp.jpeg)
