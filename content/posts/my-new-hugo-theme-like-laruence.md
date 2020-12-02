@@ -5,11 +5,11 @@ date: 2020-11-22T12:23:45+08:00
 
 我从2013年开始搭建自己的博客网站，最初用的 `WordPress`，买了一台云主机，下了一个 CMS 风格的皮肤，当初的网站长这样：
 
-![](https://imgkr2.cn-bj.ufileos.com/976cebbc-ee6f-4251-97e6-4d38ce0aaa03.png?UCloudPublicKey=TOKEN_8d8b72be-579a-4e83-bfd0-5f6ce1546f13&Signature=s4kwrACjgq4P4gJ0NvIT4j1KIvY%253D&Expires=1606100749)
+![](http://blogcdn.idoustudio.com/pic/period1.png)
 
 后来我学习了 `Markdown` 语法，接触了一些静态网站生成工具，就折腾着把原来的网站迁移到了 `Hexo`。自己动手写了一个皮肤，整成了这个样子：
 
-![](https://imgkr2.cn-bj.ufileos.com/3133c5d2-a9d8-420b-8299-e4eec6407268.png?UCloudPublicKey=TOKEN_8d8b72be-579a-4e83-bfd0-5f6ce1546f13&Signature=5H6zZwZMWqf8Hjh682dGx4VnPts%253D&Expires=1606101765)
+![](http://blogcdn.idoustudio.com/pic/period2.png)
 
 
 后来慢慢的发现，使用 Hexo ，每次构建发布的时候太慢了，有时候换个皮肤，会遇到一大堆 js 报错，自己开发皮肤的时候也不太好调试。
@@ -21,13 +21,13 @@ date: 2020-11-22T12:23:45+08:00
 网站生成工具换了之后，接下来最重要的事情，就是要整一个好看的皮肤。
 我上一个使用的皮肤长这样：
 
-![](https://imgkr2.cn-bj.ufileos.com/399d53a7-2368-4edb-8898-37d8fca2b27f.png?UCloudPublicKey=TOKEN_8d8b72be-579a-4e83-bfd0-5f6ce1546f13&Signature=QLHuyF7oKXSfsQRHOCx9QROmcjY%253D&Expires=1606102893)
+![](http://blogcdn.idoustudio.com/pic/period3.png)
 
 每隔一段时间，我都会觉得在用的博客皮肤不好看，然后就总想着换一个皮肤，在网上找一圈没有喜欢的就会自己写。
 
 前阵子看到了 PHP鸟哥 的个人网站：
 
-![](https://imgkr2.cn-bj.ufileos.com/26abd7ae-e5cc-4a33-af74-6ec34f4a03ec.png?UCloudPublicKey=TOKEN_8d8b72be-579a-4e83-bfd0-5f6ce1546f13&Signature=TbGPRjlkdmczB1CCyyAUoG6bvTE%253D&Expires=1606105818)
+![](http://blogcdn.idoustudio.com/pic/period4.png)
 
 当时就被吸引了，我就喜欢这种简洁大气黑白配的风格。于是便有了把鸟哥的博客皮肤copy下来的想法。
 
@@ -39,7 +39,7 @@ date: 2020-11-22T12:23:45+08:00
 
 现在这款皮肤已经在我的个人网站：[idoubi.cc](https://idoubi.cc) 用上了，预览效果是这样：
 
-![](https://imgkr2.cn-bj.ufileos.com/51b819c3-4314-411b-81da-2dc0a95824e0.png?UCloudPublicKey=TOKEN_8d8b72be-579a-4e83-bfd0-5f6ce1546f13&Signature=tzp4nTeN%252Fi%252BIU42zkHIjjQoQBq8%253D&Expires=1606103516)
+![](http://blogcdn.idoustudio.com/pic/period5.png)
 
 我在这款主题支持了几个右侧的挂件，分别是
 
@@ -66,7 +66,11 @@ date: 2020-11-22T12:23:45+08:00
 
 欢迎关注我的公众号获取更多信息。
 
-![](https://blogcdn.idoustudio.com/idoubi-mp.jpeg)
+![](http://blogcdn.idoustudio.com/pic/period6.png)
+
+
+
+
 
 
 

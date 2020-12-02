@@ -40,6 +40,9 @@ description = "艾逗笔个人博客，专注分享优质的技术内容。"
 logo = "https://blogcdn.idoustudio.com/idoubi.png"
 subTitle = "有逻辑的脑子万里挑一"
 
+[params.analysis]
+baidu = "https://hm.baidu.com/hm.js?e8351b6d4626d5881d439ea1f6184baa"
+
 [params.cdn.js]
 highlightjs = "https://cdn.bootcdn.net/ajax/libs/highlight.js/10.3.2/highlight.min.js"
 jquery = "https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"
