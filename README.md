@@ -11,6 +11,6 @@
 
 联系方式
 
-- 微博：[http://weibo.com/u/2611593311](http://weibo.com/u/2611593311)
-- 公众号：艾逗笔
-- 微信：idoubicc
+- 微博：[艾逗笔](http://weibo.com/u/2611593311)
+- 公众号：[艾逗笔](https://blogcdn.idoustudio.com/idoubi-mp.jpeg)
+- 微信：[idoubicc](http://blogcdn.idoustudio.com/pic/20201130130428.png)
