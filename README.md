@@ -11,8 +11,6 @@
 
 联系方式
 
-- 博客：[https://idoubi.cc](https://idoubi.cc)
 - 微博：[http://weibo.com/u/2611593311](http://weibo.com/u/2611593311)
-- Github：[https://github.com/idoubi](https://github.com/idoubi)
 - 公众号：艾逗笔
 - 微信：idoubicc
