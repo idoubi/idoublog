@@ -1,4 +1,4 @@
-## 艾逗笔个人博客
+## 艾逗笔
 
 > 有逻辑的脑子万里挑一。
 
@@ -11,8 +11,8 @@
 
 联系方式
 
-- 个人博客：[http://idoubi.cc](http://idoubi.cc)
+- 博客：[https://idoubi.cc](https://idoubi.cc)
 - 微博：[http://weibo.com/u/2611593311](http://weibo.com/u/2611593311)
 - Github：[https://github.com/idoubi](https://github.com/idoubi)
-
-![](http://blogcdn.idoustudio.com/idoubi-mp.jpeg)
+- 公众号：艾逗笔
+- 微信：idoubicc
