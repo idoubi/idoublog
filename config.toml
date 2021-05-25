@@ -1,8 +1,11 @@
-theme = "period"
-
-baseURL = "https://idoubi.cc/"
-copyright = "© 艾逗笔 2020 All rights reserved."
-paginate = 20
+baseurl = "/"
+disqusShortname = ""
+footnotereturnlinkcontents = "↩"
+googleAnalytics = ""
+ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
+languageCode = "cn-zh"
+preserveTaxonomyNames = true
+theme = "ivy"
 title = "艾逗笔"
 
 [permalinks]
@@ -14,104 +17,32 @@ name = "首页"
 url = "/"
 weight = 1
 [[menu.main]]
-name = "笔记"
-url = "/categories/开发笔记/"
-weight = 2
+name = "关于"
+url = "/about/"
+weight = 6
 [[menu.main]]
-name = "教程"
-url = "/categories/系列分享/"
+name = "分类"
+url = "/categories/"
 weight = 3
 [[menu.main]]
-name = "开源"
-url = "/categories/开源项目"
+name = "标签"
+url = "/tags/"
 weight = 4
 [[menu.main]]
-name = "随笔"
-url = "/categories/随笔杂感"
+name = "作品"
+url = "/works/"
 weight = 5
-[[menu.main]]
-name = "关于"
-url = "/about"
-weight = 6
 
 [params]
-author = "艾逗笔"
-description = "艾逗笔个人博客，专注分享优质的技术内容。"
-logo = "https://blogcdn.idoustudio.com/idoubi.png"
-subTitle = "有逻辑的脑子万里挑一"
+description = "有逻辑的脑子万里挑一。"
+footer = "&copy; [艾逗笔](https://idoubi.cc) 2020 | [Github](https://github.com/idoubi)"
+mpqrcode = "http://blogcdn.idoustudio.com/idoubi-mp.jpeg"
 
-[params.analysis]
-baidu = "https://hm.baidu.com/hm.js?e8351b6d4626d5881d439ea1f6184baa"
-
-[params.cdn.js]
-highlightjs = "https://cdn.bootcdn.net/ajax/libs/highlight.js/10.3.2/highlight.min.js"
-jquery = "https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"
-
-[params.cdn.css]
-highlightjs = "https://cdn.bootcdn.net/ajax/libs/highlight.js/10.3.2/styles/an-old-hope.min.css"
-
-[params.widget.about]
-description = "全栈开发者，爱好造轮子。"
-logo = "https://blogcdn.idoustudio.com/idoubi.png"
-show = true
-
-[params.widget.qrcode]
-show = true
-title = "微信公众号"
-url = "https://blogcdn.idoustudio.com/idoubi-mp.jpeg"
+highlightjsCDN = "//cdn.bootcss.com"
+highlightjsLang = ["r", "yaml", "tex"]
+highlightjsTheme = "github"
+highlightjsVersion = "9.12.0"
 
 [params.comment]
 repo = "idoubi/idoubi.github.io"
-show = true
 theme = "github-light"
-
-# 开源项目
-[params.widget.projects]
-show = true
-title = "开源项目"
-
-[[params.widget.projects.items]]
-description = "一款简洁、高效的微信开发框架"
-name = "douchat"
-url = "https://github.com/idoubi/douchat/"
-
-[[params.widget.projects.items]]
-description = "Golang 每日新闻检索平台"
-name = "gonews"
-url = "https://github.com/idoubi/gonews"
-
-[[params.widget.projects.items]]
-description = "根据 SQL 语句生成 Golang 结构体的工具"
-name = "sql2struct"
-url = "https://github.com/idoubi/sql2struct"
-
-[[params.widget.projects.items]]
-description = "在 Go 中发起 HTTP 请求的工具库"
-name = "goz"
-url = "https://github.com/idoubi/goz"
-
-[[params.widget.projects.items]]
-description = "获取常用信息的命令行工具"
-name = "tellme"
-url = "https://github.com/idoubi/tellme"
-
-[[params.widget.projects.items]]
-description = "企业微信机器人SDK"
-name = "webot"
-url = "https://github.com/cutesdk/webot"
-
-[params.widget.categories]
-show = true
-title = "分类"
-
-[params.widget.tags]
-show = true
-title = "标签"
-
-[params.widget.links]
-show = true
-title = "友情链接"
-
-[[params.widget.links.items]]
-title = "豆信-简洁高效的微信开发框架"
-url = "https://www.douchat.net/"

@@ -1,7 +1,7 @@
 theme = "period"
 
 baseURL = "https://idoubi.cc/"
-copyright = "© 艾逗笔 2020 All rights reserved"
+copyright = "© 艾逗笔 2020 All rights reserved."
 paginate = 20
 title = "艾逗笔"
 
@@ -40,6 +40,9 @@ description = "艾逗笔个人博客，专注分享优质的技术内容。"
 logo = "https://blogcdn.idoustudio.com/idoubi.png"
 subTitle = "有逻辑的脑子万里挑一"
 
+[params.analysis]
+baidu = "https://hm.baidu.com/hm.js?e8351b6d4626d5881d439ea1f6184baa"
+
 [params.cdn.js]
 highlightjs = "https://cdn.bootcdn.net/ajax/libs/highlight.js/10.3.2/highlight.min.js"
 jquery = "https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"
@@ -58,7 +61,7 @@ title = "微信公众号"
 url = "https://blogcdn.idoustudio.com/idoubi-mp.jpeg"
 
 [params.comment]
-repo = "idoubi/idoubi.cc"
+repo = "idoubi/idoubi.github.io"
 show = true
 theme = "github-light"
 
@@ -70,7 +73,7 @@ title = "开源项目"
 [[params.widget.projects.items]]
 description = "一款简洁、高效的微信开发框架"
 name = "douchat"
-url = "https://douchat.net"
+url = "https://github.com/idoubi/douchat/"
 
 [[params.widget.projects.items]]
 description = "Golang 每日新闻检索平台"
@@ -92,6 +95,11 @@ description = "获取常用信息的命令行工具"
 name = "tellme"
 url = "https://github.com/idoubi/tellme"
 
+[[params.widget.projects.items]]
+description = "企业微信机器人SDK"
+name = "webot"
+url = "https://github.com/cutesdk/webot"
+
 [params.widget.categories]
 show = true
 title = "分类"
@@ -106,4 +114,4 @@ title = "友情链接"
 
 [[params.widget.links.items]]
 title = "豆信-简洁高效的微信开发框架"
-url = "http://douchat.net"
+url = "https://www.douchat.net/"
